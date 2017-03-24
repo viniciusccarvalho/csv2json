@@ -3,7 +3,7 @@
 
 The CSV 2 JSON processor is a kind of splitter that will parse the input from an URL endpoint using the specified format
 and yield one JSON object per each line of the input csv file.
-+
+
 By default this processor will map the header of the CSV file (first line) into a JSON output.
 
 ```
@@ -13,13 +13,13 @@ Peter,Parker,Spiderman
 
 Would be transformed into the following JSON object
 [source,javascript]
-====
+----
 {
 "first_name" : "Peter",
 "last_name" : "Parker",
 "identity" : "Spiderman"
 }
-====
+----
 
 == Options
 //end::configuration-properties[]
