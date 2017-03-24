@@ -23,12 +23,12 @@ Would be transformed into the following JSON object
 
 == Options
 //end::configuration-properties[]
-$$csv2json.format$$: The CSV format of the file being parsed check https://commons.apache.org/proper/commons-csv/index.html[Apache Commons CSV] for supported formats. *(String, default: `$$Excel$$`)*
-$$csv2json.contentType$$: The content type of the message being generated. *(String, default: `$$application/json$$`)*
-$$csv2json.delimiter$$: The delimiter used on the CSV file, overrides the default selected by format. *(String, default: `$$,$$`)*
-$$csv2json.aliases$$: A list of aliases for the headers of the CSV files. Useful if you want to change property names, the format is `$header:alias`, for example: `first_name:firstName` *(String[], default: `$$null$$`)*
-$$csv2json.includes$$: A list of headers to be included. Useful for filtering. *(String[], default: `$$null$$`)*
-$$csv2json.includes$$: A list of headers to be excluded. Useful for filtering. *(String[], default: `$$null$$`)*
+$$csv2json.format$$:: The CSV format of the file being parsed check https://commons.apache.org/proper/commons-csv/index.html[Apache Commons CSV] for supported formats. *(String, default: `$$Excel$$`)*
+$$csv2json.contentType$$:: The content type of the message being generated. *(String, default: `$$application/json$$`)*
+$$csv2json.delimiter$$:: The delimiter used on the CSV file, overrides the default selected by format. *(String, default: `$$,$$`)*
+$$csv2json.aliases$$:: A list of aliases for the headers of the CSV files. Useful if you want to change property names, the format is `$header:alias`, for example: `first_name:firstName` *(String[], default: `$$null$$`)*
+$$csv2json.includes$$:: A list of headers to be included. Useful for filtering. *(String[], default: `$$null$$`)*
+$$csv2json.includes$$:: A list of headers to be excluded. Useful for filtering. *(String[], default: `$$null$$`)*
 
 //end::ref-doc[]
 == Build
