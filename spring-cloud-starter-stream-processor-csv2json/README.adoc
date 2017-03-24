@@ -1,12 +1,34 @@
 //tag::ref-doc[]
 = CSV2JSON Processor
 
+The CSV 2 JSON processor is a kind of splitter that will parse the input from an URL endpoint using the specified format
+and yield one JSON object per each line of the input csv file.
++
+By default this processor will map the header of the CSV file (first line) into a JSON output.
 
+```
+first_name,last_name,identity
+Peter,Parker,Spiderman
+```
+
+Would be transformed into the following JSON object
+[source,javascript]
+====
+{
+"first_name" : "Peter",
+"last_name" : "Parker",
+"identity" : "Spiderman"
+}
+====
 
 == Options
-
-
 //end::configuration-properties[]
+$$csv2json.format$$: The CSV format of the file being parsed check https://commons.apache.org/proper/commons-csv/index.html[Apache Commons CSV] for supported formats. *(String, default: `$$Excel$$`)*
+$$csv2json.contentType$$: The content type of the message being generated. *(String, default: `$$application/json$$`)*
+$$csv2json.delimiter$$: The delimiter used on the CSV file, overrides the default selected by format. *(String, default: `$$,$$`)*
+$$csv2json.aliases$$: A list of aliases for the headers of the CSV files. Useful if you want to change property names, the format is `$header:alias`, for example: `first_name:firstName` *(String[], default: `$$null$$`)*
+$$csv2json.includes$$: A list of headers to be included. Useful for filtering. *(String[], default: `$$null$$`)*
+$$csv2json.includes$$: A list of headers to be excluded. Useful for filtering. *(String[], default: `$$null$$`)*
 
 //end::ref-doc[]
 == Build

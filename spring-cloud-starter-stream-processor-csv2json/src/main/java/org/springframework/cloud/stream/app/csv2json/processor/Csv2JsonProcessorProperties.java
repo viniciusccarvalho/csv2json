@@ -36,7 +36,7 @@ public class Csv2JsonProcessorProperties {
 
 	private String contentType = "application/json";
 
-	private String format = "EXCEL";
+	private String format = "Excel";
 
 	public char getDelimiter() {
 		return delimiter;
