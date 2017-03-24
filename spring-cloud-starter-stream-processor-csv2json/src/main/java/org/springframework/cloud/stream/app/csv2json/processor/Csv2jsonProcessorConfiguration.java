@@ -19,6 +19,8 @@ package org.springframework.cloud.stream.app.csv2json.processor;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.messaging.Processor;
+import org.springframework.cloud.stream.messaging.Source;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -28,4 +30,10 @@ import org.springframework.context.annotation.Configuration;
 @EnableBinding(Processor.class)
 @EnableConfigurationProperties(Csv2JsonProcessorProperties.class)
 public class Csv2jsonProcessorConfiguration {
+
+	@Bean
+	public CSV2JsonProcessor csv2JsonProcessor(Source source, Csv2JsonProcessorProperties properties){
+		return new CSV2JsonProcessor(properties,source);
+	}
+
 }
